@@ -56,6 +56,10 @@ cover/
 .env
 .env.*
 !.env.example
+*.pem
+*.key
+*.crt
+*credentials*.json
 .venv
 env/
 venv/
@@ -71,10 +75,18 @@ dmypy.json
 .pytype/
 .ruff_cache/
 
-# Databases / local storage
+# Databases & local storage
 *.db
 *.sqlite
 *.sqlite3
+postgres_data/
+pgdata/
+data/
+
+# Bot media & temp files
+media/
+uploads/
+temp/
 
 # Logs
 *.log
@@ -88,6 +100,8 @@ desktop.ini
 # IDEs and Editors
 .idea/
 .vscode/
+.cursor/
+.claude/
 *.swp
 *.swo
 *~
@@ -101,7 +115,6 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# AI
-.agents/skills/
-.agents/workflows/
+# AI & Agent configs
+.agents/
 skills-lock.json

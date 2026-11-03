@@ -1,13 +1,21 @@
-# Технологический стек
+# Технологический стек проекта
 
-## backend
-Python (aiogram)
+## Backend
+- **Язык**: Python 3.12+
+- **Telegram Bot Framework**: `aiogram` (v3.x) — асинхронный фреймворк для взаимодействия с Telegram Bot API, маршрутизации сообщений и FSM (конечные автоматы)
+- **Конфигурация**: `pydantic-settings` — строгая типизация настроек и загрузка из `.env`
+- **Менеджер пакетов и окружения**: `uv`
 
-## frontend
-telegram - Заменяет реализацию фронтенда на чат посредством API
+## База данных и ORM
+- **СУБД**: PostgreSQL 16
+- **Драйвер подключения**: `asyncpg` — высокопроизводительный асинхронный драйвер
+- **ORM**: `SQLAlchemy 2.0` (asyncio) — объектно-реляционное отображение моделей данных
+- **Миграции**: `Alembic` — версионирование и автоматическое применение миграций схемы БД
 
-## db
-PostgreSQL
+## Искусственный интеллект (AI & LLM)
+- **Модель**: Google Gemini (`gemini-2.0-flash` / `gemini-1.5-flash`) через `langchain-google-genai`
+- **Оркестрация агентов**: `LangGraph` — построение ReAct графа агента с поддержкой вызова инструментов (Tool Calling)
+- **Персистентность памяти агента**: `langgraph-checkpoint-postgres` (`AsyncPostgresSaver`) — сохранение сессий диалога и истории чекпоинтов в PostgreSQL
 
-## AI
-LangChain, LangGraph, DeepAgents
+## Инфраструктура
+- **Контейнеризация**: Docker & Docker Compose — быстрый локальный запуск PostgreSQL

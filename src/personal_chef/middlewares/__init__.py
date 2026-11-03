@@ -1,3 +1,3 @@
-"""Пакет middlewares для aiogram бота."""
+from personal_chef.middlewares.db import DBSessionMiddleware
 
-__all__ = []
+__all__ = ["DBSessionMiddleware"]

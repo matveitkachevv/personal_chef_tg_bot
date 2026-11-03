@@ -2,7 +2,7 @@ from aiogram.types import KeyboardButton, ReplyKeyboardMarkup
 
 
 def get_main_keyboard() -> ReplyKeyboardMarkup:
-    """Главная клавиатура бота."""
+    """Главное меню бота (Reply Keyboard)."""
     return ReplyKeyboardMarkup(
         keyboard=[
             [
@@ -15,5 +15,5 @@ def get_main_keyboard() -> ReplyKeyboardMarkup:
             ],
         ],
         resize_keyboard=True,
-        input_field_placeholder="Выберите действие...",
+        input_field_placeholder="Выберите действие или напишите шефу...",
     )

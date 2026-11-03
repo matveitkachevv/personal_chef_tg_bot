@@ -4,7 +4,10 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    bot_token: SecretStr
+    bot_token: SecretStr = SecretStr("")
+    database_url: str = "postgresql+asyncpg://postgres:postgres@localhost:5432/personal_chef"
+    gemini_api_key: SecretStr | None = None
+    gemini_model: str = "gemini-2.0-flash"
     log_level: str = "INFO"
 
     model_config = SettingsConfigDict(
